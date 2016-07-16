@@ -120,3 +120,19 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#honor
+SECURITY_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PTOTO', 'https')
+
+# -------
+ALLOWED_HOSTS = ['*']
+
+#Static files
+import os 
+#BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
+STATIC_URL = '/static/'
+
+STATIC_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+    )
